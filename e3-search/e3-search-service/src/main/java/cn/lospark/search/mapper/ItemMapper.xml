@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.lospark.search.mapper.ItemMapper" >
+	<!-- 导入商品索引 -->
+  <select id="getItemList" resultType="cn.lospark.common.pojo.SearchItem">
+	SELECT
+	  ti.id AS id,
+	  ti.title AS title,
+	  ti.price AS price,
+	  ti.sell_point AS sellPoint,
+	  ti.image AS image,
+	  tic.name AS categoryName
+	FROM tb_item ti
+	  LEFT JOIN tb_item_cat tic
+	    ON tic.id = ti.cid
+	WHERE ti.status = 1
+  </select>
+  <!--通过id查找搜索商品  -->
+  <select id="getItemById" parameterType="long" resultType="cn.lospark.common.pojo.SearchItem">
+	SELECT
+	  ti.id AS id,
+	  ti.title AS title,
+	  ti.price AS price,
+	  ti.sell_point AS sellPoint,
+	  ti.image AS image,
+	  tic.name AS categoryName
+	FROM tb_item ti
+	  LEFT JOIN tb_item_cat tic
+	    ON tic.id = ti.cid
+	WHERE 
+		ti.status = 1
+		AND ti.id = #{itemId}
+  </select>
+</mapper>
