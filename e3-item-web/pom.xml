@@ -91,6 +91,10 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 		</dependency>
+		<dependency>
+				<groupId>org.freemarker</groupId>
+				<artifactId>freemarker</artifactId>
+		</dependency>
   </dependencies>
    <!-- 配置Tomcat 插件 -->
   <build>
