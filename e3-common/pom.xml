@@ -8,6 +8,16 @@
 	<artifactId>e3-common</artifactId>
   <!-- 依赖的jar包 -->
   <dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
   		<!-- 时间操作组件 -->
 		<dependency>
 			<groupId>joda-time</groupId>
