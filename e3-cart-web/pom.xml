@@ -10,11 +10,16 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
   <dependencies>
-  	<!-- <dependency>
+  	<dependency>
   	    <groupId>cn.lospark</groupId>
-	    <artifactId>e3-content-interface</artifactId>
+	    <artifactId>e3-manager-interface</artifactId>
 	    <version>0.0.1-SNAPSHOT</version>
-  	</dependency> -->
+  	</dependency>
+  	<dependency>
+  	    <groupId>cn.lospark</groupId>
+	    <artifactId>e3-sso-interface</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+  	</dependency>
   	<dependency>
   	    <groupId>cn.lospark</groupId>
 	    <artifactId>e3-cart-interface</artifactId>

@@ -28,6 +28,6 @@
 	<!-- 用dubbo协议在20881端口暴露服务 -->
 	<dubbo:protocol name="dubbo" port="20884" />
 	<!-- 声明需要暴露的服务接口 （ 在service层打过注解表示在Spring容器中生成了service的实现类，id为类名首字母小写）-->
-	<!-- <dubbo:service interface="cn.lospark.content.service.ContentCategoryService" ref="contentCategoryServiceImpl" timeout="600000" /> -->
+	<dubbo:service interface="cn.lospark.cart.service.CartService" ref="cartServiceImpl" timeout="600000" />
 	
 </beans>

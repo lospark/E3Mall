@@ -25,10 +25,19 @@
 	<!-- 配置资源映射 -->
 	<!-- <mvc:resources location="/css/" mapping="/css/**"/>
 	<mvc:resources location="/js/" mapping="/js/**"/> -->
+	<!-- 配置mvc拦截器 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+			<bean class="cn.lospark.cart.interceptor.LoginInterceptor"/>
+		</mvc:interceptor>	
+	</mvc:interceptors>
 	
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="e3-cart-web"/>
 	<dubbo:registry protocol="zookeeper" address="192.168.25.202:2181"/>
-	<!-- <dubbo:reference interface="cn.lospark.service.ItemService" id="itemService" /> -->
+	<dubbo:reference interface="cn.lospark.service.ItemService" id="itemService" />
+	<dubbo:reference interface="cn.lospark.sso.service.TokenService" id="tokenService" />
+	<dubbo:reference interface="cn.lospark.cart.service.CartService" id="cartService" />
 	
 </beans>
