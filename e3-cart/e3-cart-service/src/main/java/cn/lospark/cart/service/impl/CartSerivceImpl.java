@@ -93,8 +93,14 @@ public class CartSerivceImpl implements CartService {
 
 	@Override
 	public E3Result deleteCartItem(long userId, long itemId) {
-		// TODO Auto-generated method stub
-		return null;
+		jedisClient.hdel(REDIS_CART_PRE+":"+userId, itemId +"");
+		return E3Result.ok();
+	}
+
+	@Override
+	public E3Result clearCartItem(long userId) {
+		jedisClient.del(REDIS_CART_PRE+":"+userId);
+		return  E3Result.ok();
 	}
 
 }
