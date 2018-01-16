@@ -39,5 +39,7 @@
 	<dubbo:reference interface="cn.lospark.service.ItemCatService" id="itemCatService" />
 	<dubbo:reference interface="cn.lospark.content.service.ContentCategoryService" id="contentCategoryService" />
 	<dubbo:reference interface="cn.lospark.content.service.ContentService" id="contentService" />
+	<dubbo:reference interface="cn.lospark.search.service.SearchItemService" id="searchItemService" />
+	
 	
 </beans>
